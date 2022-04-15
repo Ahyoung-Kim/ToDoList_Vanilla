@@ -1,0 +1,196 @@
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700&family=Roboto:wght@300&display=swap');
+
+body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Nanum Gothic', sans-serif;
+  background-image: url('../images/bg.png');
+}
+
+header {
+  height: 80px;
+  background-color: #333;
+}
+
+.todo-box {
+  width: 600px;
+  height: 500px;
+  margin: 0 auto;
+  margin-top: 150px;
+  box-shadow: 0 10px 10px  rgb(111, 111, 111, .6);
+  text-align: center;
+  background-color: rgb(255, 252, 248);
+  padding-bottom: 10px;
+}
+
+.todo-box.box-grow {
+  height: auto;
+  padding-bottom: 10px;
+  margin-bottom: 200px;
+}
+
+.todo-box .top {
+  text-shadow: 5px 5px 5px rgb(177, 148, 177);
+  padding: 10px;
+  border-bottom: 1px solid #c3c1c1;
+}
+
+.todo-box .input-box {
+  margin-top: 30px;
+}
+
+.todo-box .input-box #input {
+  width: 250px;
+  height: 24px;
+  border: 2px solid #c3c1c1;
+  border-radius: 5px;
+  outline: none;
+  font-size: 18px;
+  color: #333;
+}
+
+.todo-box .input-box #input:hover {
+  border-color: green;
+}
+
+.todo-box .input-box #enter, .todo-box .input-box #reset {
+  height: 29px;
+  border-radius: 5px;
+  border: 2px solid #c3c1c1;
+  color: rgb(122, 121, 121);
+}
+
+.todo-box .input-box #enter {
+  background-color: rgba(187, 164, 203, 0.6);
+}
+.todo-box .input-box #enter:hover {
+  border-color: rgb(141, 79, 165);
+  color: rgb(141, 79, 165);
+  cursor: pointer;
+}
+
+.todo-box .input-box #reset {
+  background-color: rgb(189, 189, 223);
+}
+.todo-box .input-box #reset:hover {
+  border-color: rgb(85, 60, 209);
+  color: rgb(85, 60, 209);
+  cursor: pointer;
+}
+
+#todo-list {
+  width: 450px;
+  margin: 30px auto;
+  text-align: start;
+  font-size: 18px;
+  font-weight: 500;
+  color: rgb(64, 64, 64);
+}
+
+#todo-list li {
+  margin-bottom: 10px;
+  border-bottom: 1px solid rgb(51, 51, 51, .2);
+  padding-bottom: 3px;
+}
+
+#todo-list li span {
+  display: inline-block;
+  margin-left: 16px;
+}
+
+#todo-list li span.complete {
+  text-decoration: 2.2px rgba(134, 46, 167, 0.7) line-through;
+}
+
+#todo-list li button {
+  display: inline-block;
+  margin: 0 0 5px 10px;
+  background-color: rgba(172, 170, 170, 0.3);
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+#todo-list li button#btn-red {
+  color: rgb(187, 17, 17);
+}
+
+#todo-list li button#btn-red:hover {
+  color: white;
+  background-color: rgba(234, 29, 29, 0.5);
+  cursor: pointer;
+}
+
+#todo-list li button#btn-green {
+  color: rgb(15, 139, 19);
+}
+#todo-list li button#btn-green:hover {
+  color: white;
+  background-color: rgba(93, 170, 112, 0.5);
+  cursor: pointer;
+}
+
+.date-clock-box {
+  color: rgb(89, 89, 89);
+  text-shadow: 0 5px 5px rgba(75, 75, 75, 0.5);
+  font-size: 25px;
+  text-align: center;
+  width: 300px;
+  position: fixed;
+  top: 300px;
+  left: 50px;
+}
+
+.date-clock-box .date {
+  margin: 0 auto 30px;
+  width: 230px;
+  height: 90px;
+  font-weight: 900;
+  line-height: 90px;
+  border-radius: 10px;
+  border: 4px solid rgb(97, 96, 96);
+  box-shadow: 0 5px 10px rgba(172, 170, 170, 0.5);
+}
+
+.date-clock-box .clock {
+  margin: 0 auto;
+  line-height: 150px;
+  font-weight: bold;
+
+  width: 150px;
+  height: 150px;
+  border-radius: 75px;
+  border: 3px solid rgb(97, 96, 96);
+  box-shadow: 0 5px 10px rgba(172, 170, 170, 0.5);
+  background-image: url('../images/clock.PNG');
+  background-size: contain;
+}
+
+.error {
+  margin: 400px auto;
+  line-height: 60px;
+  font-size: 28px;
+  font-weight: bold;
+  border: 5px solid red;
+  border-radius: 8px;
+  display: none;
+}
+
+@media (max-width: 1272px){
+  .todo-box {
+    margin-top: 50px;
+  }
+  .date-clock-box {
+    position: static;
+    margin: 30px auto;
+  }
+}
+
+@media (max-width: 640px){
+  .main-box {
+    display: none;
+  }
+  .error {
+    display: block;
+  }
+}
