@@ -11,6 +11,7 @@
 
 
 3. 가로너비 640px 이하인 화면
+
 ![default](./images/result3.PNG)
 
 
