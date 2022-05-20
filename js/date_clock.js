@@ -12,7 +12,9 @@ function getTime(){
 
 function getDate(){
   const date = new Date();
-  dateEl.innerText = date.toDateString();
+  const text = document.createElement('p');
+  text.innerText = date.toDateString();
+  dateEl.appendChild(text)
 }
 
 getDate();
