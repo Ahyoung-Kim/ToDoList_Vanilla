@@ -206,11 +206,15 @@ header {
   body {
     font-size: 10px;
   }
+  header {
+    height: 40px;
+    background-color: #333;
+  }
   .date-clock-box .clock {
     display: none;
   }
   .date-clock-box .date {
-    margin: 0 auto 30px;
+    margin: 0 auto;
     width: 210px;
     height: 32px;
     font-size: 16px;
@@ -223,6 +227,7 @@ header {
   .todo-box {
     width: 260px;
     height: 320px;
+    margin-top: 0;
   }
   
   .todo-box.box-grow {
