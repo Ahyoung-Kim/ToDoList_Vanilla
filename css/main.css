@@ -1,10 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700&family=Roboto:wght@300&display=swap');
+@font-face {
+  font-family: 'EarlyFontDiary';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_220508@1.0/EarlyFontDiary.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
 
 body {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: 'Nanum Gothic', sans-serif;
+  font-family: 'EarlyFontDiary', sans-serif;
   background-image: url('../images/bg.png');
 }
 
@@ -109,6 +115,7 @@ header {
   background-color: rgba(172, 170, 170, 0.3);
   border-radius: 5px;
   font-weight: bold;
+  border-color: #c3c1c1;
 }
 
 #todo-list li button#btn-red {
@@ -186,11 +193,105 @@ header {
   }
 }
 
-@media (max-width: 640px){
+/*@media (max-width: 640px){
   .main-box {
     display: none;
   }
   .error {
     display: block;
+  }
+}*/
+
+@media only screen and (max-width: 320px) {
+  body {
+    font-size: 10px;
+  }
+  .date-clock-box .clock {
+    display: none;
+  }
+  .date-clock-box .date {
+    margin: 0 auto 30px;
+    width: 210px;
+    height: 32px;
+    font-size: 16px;
+    font-weight: 900;
+    line-height: 32px;
+    border-radius: 10px;
+    border: 2px solid rgb(97, 96, 96);
+    box-shadow: 0 5px 10px rgba(172, 170, 170, 0.5);
+  }
+  .todo-box {
+    width: 260px;
+    height: 320px;
+  }
+  
+  .todo-box.box-grow {
+    height: auto;
+    padding-bottom: 10px;
+    margin-bottom: 200px;
+  }
+  
+  .todo-box .top {
+    text-shadow: 5px 5px 5px rgb(177, 148, 177);
+    padding: 10px;
+    border-bottom: 1px solid #c3c1c1;
+  }
+  
+  .todo-box .input-box {
+    margin-top: 15px;
+  }
+  
+  .todo-box .input-box #input {
+    width: 130px;
+    height: 16px;
+    font-size: 12px;
+  }
+  
+  .todo-box .input-box #enter, .todo-box .input-box #reset {
+    height: 20px;
+    border-radius: 5px;
+    font-size: 10px;
+    border: 2px solid #c3c1c1;
+    color: rgb(122, 121, 121);
+  }
+  
+  #todo-list {
+    width: 222px;
+    margin: 5px auto;
+    text-align: start;
+    font-size: 10px;
+    font-weight: 500;
+    color: rgb(64, 64, 64);
+    padding-left: 10px;
+  }
+  
+  #todo-list li {
+    margin-bottom: 5px;
+    border-bottom: 1px solid rgb(51, 51, 51, .2);
+    padding-bottom: 1px;
+  }
+
+  #todo-list li:first-child {
+    margin-top: 10px;
+  }
+  
+  #todo-list li span {
+    display: inline-block;
+    margin-left: 2px;
+  }
+  
+  #todo-list li span.complete {
+    text-decoration: 1.1px rgba(134, 46, 167, 0.7) line-through;
+  }
+  
+  #todo-list li button {
+    display: inline-block;
+    margin: 0 0 5px 10px;
+    background-color: rgba(172, 170, 170, 0.3);
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 8px;
+    border-color: #c3c1c1;
+    text-align: center;
   }
 }
